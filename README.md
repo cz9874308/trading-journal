@@ -1,6 +1,6 @@
-# Trade Journal Application
+# Vibe Journal
 
-A full-stack trade journal application for Indian stock market traders. Track your NSE/BSE trades, analyze performance, and manage multiple portfolios. Built with Next.js, shadcn/ui, FastAPI, and SQLite.
+A beautifully designed trading journal for Indian stock market traders. Track your NSE/BSE trades, analyze performance, and build consistent trading habits. Built with Next.js, shadcn/ui, FastAPI, and SQLite.
 
 **🇮🇳 Designed for Indian Markets** - Currency in INR (₹), supports NSE/BSE stock symbols (RELIANCE, TCS, INFY, etc.)
 

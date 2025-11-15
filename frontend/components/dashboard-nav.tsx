@@ -2,10 +2,11 @@
 
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { LayoutDashboard, FolderKanban, LineChart, Users, LogOut } from 'lucide-react';
+import { LayoutDashboard, FolderKanban, LineChart, Users, LogOut, BookOpen } from 'lucide-react';
 import { Button } from './ui/button';
 import { useAuthStore } from '@/lib/store';
 import { cn } from '@/lib/utils';
+import { ThemeToggle } from './theme-toggle';
 
 export function DashboardNav() {
   const pathname = usePathname();
@@ -44,9 +45,15 @@ export function DashboardNav() {
   }
 
   return (
-    <div className="flex h-screen w-64 flex-col border-r bg-gray-50">
-      <div className="flex h-16 items-center border-b px-6">
-        <h1 className="text-xl font-bold">Trade Journal</h1>
+    <div className="flex h-screen w-64 flex-col border-r bg-card">
+      <div className="flex h-16 items-center justify-between border-b px-6">
+        <div className="flex items-center gap-2">
+          <div className="h-8 w-8 rounded-md bg-primary flex items-center justify-center">
+            <BookOpen className="h-5 w-5 text-primary-foreground" />
+          </div>
+          <h1 className="text-xl font-bold">Vibe Journal</h1>
+        </div>
+        <ThemeToggle />
       </div>
 
       <div className="flex-1 overflow-y-auto p-4">
