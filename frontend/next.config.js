@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'standalone',
   webpack: (config, { isServer }) => {
     // Suppress punycode deprecation warnings
     if (!isServer) {

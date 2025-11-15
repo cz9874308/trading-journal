@@ -106,12 +106,80 @@ A beautifully designed trading journal for Indian stock market traders. Track yo
 
 ## Setup Instructions
 
-### Prerequisites
+### Option 1: Docker Setup (Recommended)
+
+The easiest way to run Vibe Journal is using Docker and Docker Compose.
+
+#### Prerequisites
+- Docker Desktop (includes Docker and Docker Compose)
+- Download from: https://www.docker.com/products/docker-desktop/
+
+#### Quick Start
+
+1. Clone the repository and navigate to the project directory:
+```bash
+cd "D:\AI Bootcamp 2025\Session17"
+```
+
+2. Start the application using Docker Compose:
+```bash
+docker-compose up -d
+```
+
+This will:
+- Build and start both the backend (FastAPI) and frontend (Next.js) containers
+- The backend will be available at `http://localhost:8000`
+- The frontend will be available at `http://localhost:3000`
+- The database will be persisted in `backend/trade_journal.db`
+
+3. View logs:
+```bash
+docker-compose logs -f
+```
+
+4. Stop the application:
+```bash
+docker-compose down
+```
+
+5. Rebuild after code changes:
+```bash
+docker-compose up -d --build
+```
+
+#### Docker Commands Reference
+
+```bash
+# Start services
+docker-compose up -d
+
+# Stop services
+docker-compose down
+
+# View logs
+docker-compose logs -f
+
+# View logs for specific service
+docker-compose logs -f backend
+docker-compose logs -f frontend
+
+# Rebuild and restart
+docker-compose up -d --build
+
+# Remove containers and volumes
+docker-compose down -v
+```
+
+### Option 2: Manual Setup
+
+If you prefer to run the services locally without Docker:
+
+#### Prerequisites
 - Python 3.10+
 - Node.js 18+
 - npm or yarn
 
-### Backend Setup
+#### Backend Setup
 
 1. Navigate to the backend directory:
 ```bash
