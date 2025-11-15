@@ -6,12 +6,12 @@ services:
       dockerfile: Dockerfile
     container_name: vibe-journal-backend
     environment:
-      - DATABASE_URL=sqlite+aiosqlite:///./trade_journal.db
+      - DATABASE_URL=sqlite+aiosqlite:////app/data/trade_journal.db
       - SECRET_KEY=${SECRET_KEY:-change-this-to-a-secure-random-key-in-production}
       - ALGORITHM=HS256
       - ACCESS_TOKEN_EXPIRE_MINUTES=30
     volumes:
-      - ./backend/trade_journal.db:/app/trade_journal.db
+      - ./data:/app/data
       - ./backend/uploads:/app/uploads
     restart: unless-stopped
     networks:
