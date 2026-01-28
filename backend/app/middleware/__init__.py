@@ -1,3 +1,22 @@
-from .csrf import CSRFProtectMiddleware, generate_csrf_token
+"""
+中间件模块
 
-__all__ = ["CSRFProtectMiddleware", "generate_csrf_token"]
+本模块包含 FastAPI 应用的中间件组件，用于在请求处理前后
+执行通用的处理逻辑。
+
+核心组件
+--------
+
+- **csrf**: CSRF (跨站请求伪造) 保护中间件
+
+中间件执行顺序
+--------------
+
+1. CORS 中间件 - 处理跨域请求
+2. CSRF 中间件 - 验证 CSRF 令牌
+
+注意事项
+--------
+
+中间件的添加顺序会影响执行顺序，后添加的中间件先执行。
+"""
